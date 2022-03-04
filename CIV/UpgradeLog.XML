@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CIV">
+</Property><Property Name="Solution File" Value="E:\CIV\CIV\CIV.sln">
+</Property><Property Name="User Options File" Value="E:\CIV\CIV\CIV.suo">
+</Property><Property Name="Date" Value="Monday, November 25, 2013">
+</Property><Property Name="Time" Value="4:16 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="CIV.sln" Description="File successfully backed up as E:\CIV\CIV\Backup\CIV.sln">
+</Event><Event ErrorLevel="0" Project="" Source="CIV.suo" Description="File successfully backed up as E:\CIV\CIV\Backup\CIV.suo">
+</Event><Event ErrorLevel="0" Project="CIV" Source="CIV.csproj" Description="Project file successfully backed up as E:\CIV\CIV\Backup\CIV.csproj">
+</Event><Event ErrorLevel="0" Project="CIV" Source="CIV.csproj.user" Description="Project user file successfully backed up as E:\CIV\CIV\Backup\CIV.csproj.user">
+</Event><Event ErrorLevel="0" Project="CIV" Source="AssemblyInfo.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="BaseForm.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\BaseForm.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Classess\Printer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Classess\Printer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Classess\PrintReports.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Classess\PrintReports.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Classess\GlobalFn.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Classess\GlobalFn.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Classess\printWin32.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Classess\printWin32.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Classess\SQL.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Classess\SQL.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="DataImport.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\DataImport.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="ExpiryReport.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\ExpiryReport.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmBillCancel.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmBillCancel.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmBillCancel.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmBillCancel.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="FrmDbBackup.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\FrmDbBackup.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="FrmDbBackup.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\FrmDbBackup.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDeleteSubscriber.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDeleteSubscriber.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDeleteSubscriber.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDeleteSubscriber.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDuesPrint.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDuesPrint.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDuesPrint.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDuesPrint.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDuesReport.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDuesReport.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDuesReport.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDuesReport.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmEditSubscription.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmEditSubscription.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmEditSubscription.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmEditSubscription.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmMagazineCost.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmMagazineCost.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmMagazineCost.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmMagazineCost.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmManageCountries.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmManageCountries.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmManageCountries.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmManageCountries.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmManageStates.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmManageStates.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmManageStates.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmManageStates.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmNewSubReport.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmNewSubReport.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmNewSubReport.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmNewSubReport.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPaymentHistory.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPaymentHistory.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPaymentHistory.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPaymentHistory.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="FrmPrintBill.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\FrmPrintBill.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="FrmPrintBill.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\FrmPrintBill.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintHistory.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintHistory.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintHistory.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintHistory.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintOverseasAddLbls.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintOverseasAddLbls.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintOverseasAddLbls.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintOverseasAddLbls.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintStatus.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintStatus.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintStatus.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintStatus.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmRevenueReport.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmRevenueReport.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmRevenueReport.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\frmRevenueReport.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="AddressLabels.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\AddressLabels.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="AddressLabels.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\AddressLabels.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Main.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Main.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="NewSubscription.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\NewSubscription.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Renewal.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Renewal.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="DuesList.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\DuesList.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="DuesList.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\DuesList.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Search.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\Search.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="StatusDisplay.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\StatusDisplay.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="StatusDisplay.Designer.cs" Description="File successfully backed up as E:\CIV\CIV\Backup\StatusDisplay.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CIV" Source="App.config" Description="File successfully backed up as E:\CIV\CIV\Backup\App.config">
+</Event><Event ErrorLevel="0" Project="CIV" Source="CIV_TemporaryKey.pfx" Description="File successfully backed up as E:\CIV\CIV\Backup\CIV_TemporaryKey.pfx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="App.ico" Description="File successfully backed up as E:\CIV\CIV\Backup\App.ico">
+</Event><Event ErrorLevel="0" Project="CIV" Source="BaseForm.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\BaseForm.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="DataImport.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\DataImport.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="ExpiryReport.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\ExpiryReport.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmBillCancel.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmBillCancel.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="FrmDbBackup.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\FrmDbBackup.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDeleteSubscriber.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDeleteSubscriber.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDuesPrint.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDuesPrint.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmDuesReport.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmDuesReport.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmEditSubscription.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmEditSubscription.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmMagazineCost.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmMagazineCost.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmManageCountries.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmManageCountries.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmManageStates.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmManageStates.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmNewSubReport.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmNewSubReport.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPaymentHistory.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPaymentHistory.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="AddressLabels.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\AddressLabels.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="FrmPrintBill.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\FrmPrintBill.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintHistory.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintHistory.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintOverseasAddLbls.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintOverseasAddLbls.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmPrintStatus.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmPrintStatus.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="frmRevenueReport.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\frmRevenueReport.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Main.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\Main.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="NewSubscription.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\NewSubscription.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Renewal.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\Renewal.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="DuesList.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\DuesList.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Search.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\Search.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="StatusDisplay.resx" Description="File successfully backed up as E:\CIV\CIV\Backup\StatusDisplay.resx">
+</Event><Event ErrorLevel="0" Project="CIV" Source="Properties\app.manifest" Description="File successfully backed up as E:\CIV\CIV\Backup\Properties\app.manifest">
+</Event><Event ErrorLevel="0" Project="CIV" Source="CIV.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CIV" Source="CIV.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CIV.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CIV.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CIV" Source="CIV.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A99FB1C1-A903-4454-9C6B-951B61077739}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>CIV</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CIV</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>CIV.frmMain</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>12639EEB22CD75519753BA9CD4CB4EFC4019F624</ManifestCertificateThumbprint>
+    <ManifestKeyFile>CIV_1_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>true</SignManifests>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/civ/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="CIV_1_TemporaryKey.pfx" />
+    <None Include="CIV_TemporaryKey.pfx" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classess\Printer.cs" />
+    <Compile Include="Classess\PrintReports.cs">
+    </Compile>
+    <Compile Include="Classess\GlobalFn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classess\printWin32.cs" />
+    <Compile Include="Classess\SQL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpiryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillCancel.Designer.cs">
+      <DependentUpon>frmBillCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDbBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDbBackup.Designer.cs">
+      <DependentUpon>FrmDbBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteSubscriber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteSubscriber.Designer.cs">
+      <DependentUpon>frmDeleteSubscriber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDuesPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDuesPrint.Designer.cs">
+      <DependentUpon>frmDuesPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDuesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDuesReport.Designer.cs">
+      <DependentUpon>frmDuesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSubscription.Designer.cs">
+      <DependentUpon>frmEditSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMagazineCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMagazineCost.Designer.cs">
+      <DependentUpon>frmMagazineCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageCountries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageCountries.Designer.cs">
+      <DependentUpon>frmManageCountries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageStates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageStates.Designer.cs">
+      <DependentUpon>frmManageStates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewSubReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewSubReport.Designer.cs">
+      <DependentUpon>frmNewSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaymentHistory.Designer.cs">
+      <DependentUpon>frmPaymentHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrintBill.Designer.cs">
+      <DependentUpon>FrmPrintBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintHistory.Designer.cs">
+      <DependentUpon>frmPrintHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintOverseasAddLbls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintOverseasAddLbls.Designer.cs">
+      <DependentUpon>frmPrintOverseasAddLbls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintStatus.Designer.cs">
+      <DependentUpon>frmPrintStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRevenueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRevenueReport.Designer.cs">
+      <DependentUpon>frmRevenueReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddressLabels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressLabels.Designer.cs">
+      <DependentUpon>AddressLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renewal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuesList.Designer.cs">
+      <DependentUpon>DuesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusDisplay.Designer.cs">
+      <DependentUpon>StatusDisplay.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataImport.resx">
+      <DependentUpon>DataImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpiryReport.resx">
+      <DependentUpon>ExpiryReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillCancel.resx">
+      <DependentUpon>frmBillCancel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDbBackup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDbBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteSubscriber.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDeleteSubscriber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDuesPrint.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDuesPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDuesReport.resx">
+      <DependentUpon>frmDuesReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSubscription.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMagazineCost.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMagazineCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageCountries.resx">
+      <DependentUpon>frmManageCountries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageStates.resx">
+      <DependentUpon>frmManageStates.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewSubReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPaymentHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddressLabels.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddressLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrintBill.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPrintBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintOverseasAddLbls.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintOverseasAddLbls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRevenueReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRevenueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSubscription.resx">
+      <DependentUpon>NewSubscription.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Renewal.resx">
+      <DependentUpon>Renewal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuesList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DuesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusDisplay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatusDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
