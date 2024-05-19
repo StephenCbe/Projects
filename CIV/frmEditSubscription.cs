@@ -90,8 +90,9 @@ namespace CIV
           languageId = dr["language_id"].ToString();
           txtCity.Text = dr["city"].ToString();
           txtDistrict.Text = dr["district"].ToString();
-
+            
           txtPinCode.Text = dr["pin_code"].ToString();
+          textBoxMobileNumber.Text = dr["mobile_number"].ToString();
           txtCopies.Text = dr["num_copies"].ToString();
           txtRemarks.Text = dr["remarks"].ToString();
           lblAmtPaid.Text = dr["amount_paid"].ToString();
@@ -182,10 +183,27 @@ namespace CIV
       }
       else
         txtPinCode.Text = "0";
-      
-      try
-      {
-        int rtrn = SQL.EditSubscriber(subId, subCode, cboTitle.Text, txtLastName.Text, txtFirstName.Text, txtAddress1.Text, txtAddress2.Text, txtAddress3.Text, txtCity.Text, txtDistrict.Text, Convert.ToInt32(cboStates.SelectedValue), Convert.ToInt32(txtPinCode.Text), cboCountries.SelectedValue.ToString(), cboStatus.SelectedItem.ToString(), txtRemarks.Text, languageId, Convert.ToInt32(txtCopies.Text),category, discount);
+
+            if (textBoxMobileNumber.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter Mobile Number", GlobalFn.FormText);
+                return;
+            }
+            if (textBoxMobileNumber.Text.Length != 10)
+            {
+                MessageBox.Show("Please enter a valid Mobile Number", GlobalFn.FormText);
+                return;
+            }
+            if (!GlobalFn.IsNumeric(textBoxMobileNumber.Text))
+            {
+                MessageBox.Show("Mobile number must be in valid format", GlobalFn.FormText);
+                //TurnOnSave();
+                return;
+            }
+
+            try
+            {
+        int rtrn = SQL.EditSubscriber(subId, subCode, cboTitle.Text, txtLastName.Text, txtFirstName.Text, txtAddress1.Text, txtAddress2.Text, txtAddress3.Text, txtCity.Text, txtDistrict.Text, Convert.ToInt32(cboStates.SelectedValue), Convert.ToInt32(txtPinCode.Text), textBoxMobileNumber.Text, cboCountries.SelectedValue.ToString(), cboStatus.SelectedItem.ToString(), txtRemarks.Text, languageId, Convert.ToInt32(txtCopies.Text),category, discount);
         string msg = "Subscription has been modified successfully!";
         MessageBox.Show(msg, GlobalFn.FormText, MessageBoxButtons.OK, MessageBoxIcon.Information);
         if (MessageBox.Show("Do you want to Print Receipt?", GlobalFn.FormText, MessageBoxButtons.YesNo) == DialogResult.Yes)

@@ -79,7 +79,9 @@ namespace CIV
     private Button ButtonNewCountry;
 		string subCode="";
     DataTable dtCountries = new DataTable();
-    DataTable dtStates = new DataTable();
+        private TextBox textBoxMobileNumber;
+        private Label label17;
+        DataTable dtStates = new DataTable();
 		public frmNewSub()
 		{
 			//
@@ -254,15 +256,17 @@ namespace CIV
             this.label_Address2 = new System.Windows.Forms.Label();
             this.label_Address1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxMobileNumber = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_LName
             // 
             this.label_LName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_LName.Location = new System.Drawing.Point(53, 128);
+            this.label_LName.Location = new System.Drawing.Point(64, 148);
             this.label_LName.Name = "label_LName";
-            this.label_LName.Size = new System.Drawing.Size(80, 16);
+            this.label_LName.Size = new System.Drawing.Size(96, 18);
             this.label_LName.TabIndex = 0;
             this.label_LName.Text = "Last Name:";
             this.label_LName.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -270,9 +274,9 @@ namespace CIV
             // label_Title
             // 
             this.label_Title.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Title.Location = new System.Drawing.Point(93, 104);
+            this.label_Title.Location = new System.Drawing.Point(112, 120);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(40, 16);
+            this.label_Title.Size = new System.Drawing.Size(48, 18);
             this.label_Title.TabIndex = 1;
             this.label_Title.Text = "Title:";
             this.label_Title.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -280,15 +284,17 @@ namespace CIV
             // label_FName
             // 
             this.label_FName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_FName.Location = new System.Drawing.Point(51, 151);
+            this.label_FName.Location = new System.Drawing.Point(61, 174);
             this.label_FName.Name = "label_FName";
-            this.label_FName.Size = new System.Drawing.Size(82, 16);
+            this.label_FName.Size = new System.Drawing.Size(99, 19);
             this.label_FName.TabIndex = 2;
             this.label_FName.Text = "First Name:";
             this.label_FName.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxMobileNumber);
+            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.ButtonAddState);
             this.groupBox1.Controls.Add(this.ButtonNewCountry);
             this.groupBox1.Controls.Add(this.chkMakeReceipt);
@@ -347,17 +353,17 @@ namespace CIV
             this.groupBox1.Controls.Add(this.label_LName);
             this.groupBox1.Controls.Add(this.label_FName);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 12);
+            this.groupBox1.Location = new System.Drawing.Point(10, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(729, 369);
+            this.groupBox1.Size = new System.Drawing.Size(874, 426);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // ButtonAddState
             // 
-            this.ButtonAddState.Location = new System.Drawing.Point(625, 50);
+            this.ButtonAddState.Location = new System.Drawing.Point(750, 58);
             this.ButtonAddState.Name = "ButtonAddState";
-            this.ButtonAddState.Size = new System.Drawing.Size(98, 22);
+            this.ButtonAddState.Size = new System.Drawing.Size(118, 25);
             this.ButtonAddState.TabIndex = 58;
             this.ButtonAddState.Text = "Add State";
             this.ButtonAddState.UseVisualStyleBackColor = true;
@@ -365,9 +371,9 @@ namespace CIV
             // 
             // ButtonNewCountry
             // 
-            this.ButtonNewCountry.Location = new System.Drawing.Point(625, 25);
+            this.ButtonNewCountry.Location = new System.Drawing.Point(750, 29);
             this.ButtonNewCountry.Name = "ButtonNewCountry";
-            this.ButtonNewCountry.Size = new System.Drawing.Size(98, 22);
+            this.ButtonNewCountry.Size = new System.Drawing.Size(118, 25);
             this.ButtonNewCountry.TabIndex = 57;
             this.ButtonNewCountry.Text = "Add Country";
             this.ButtonNewCountry.UseVisualStyleBackColor = true;
@@ -377,9 +383,9 @@ namespace CIV
             // 
             this.chkMakeReceipt.AutoSize = true;
             this.chkMakeReceipt.ForeColor = System.Drawing.Color.Red;
-            this.chkMakeReceipt.Location = new System.Drawing.Point(534, 338);
+            this.chkMakeReceipt.Location = new System.Drawing.Point(641, 390);
             this.chkMakeReceipt.Name = "chkMakeReceipt";
-            this.chkMakeReceipt.Size = new System.Drawing.Size(159, 17);
+            this.chkMakeReceipt.Size = new System.Drawing.Size(190, 21);
             this.chkMakeReceipt.TabIndex = 24;
             this.chkMakeReceipt.Text = "Do Not Make Receipt";
             this.chkMakeReceipt.UseVisualStyleBackColor = true;
@@ -387,17 +393,17 @@ namespace CIV
             // dtpStartDate
             // 
             this.dtpStartDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate.Location = new System.Drawing.Point(433, 181);
+            this.dtpStartDate.Location = new System.Drawing.Point(519, 234);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(103, 21);
+            this.dtpStartDate.Size = new System.Drawing.Size(123, 24);
             this.dtpStartDate.TabIndex = 18;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(356, 185);
+            this.label15.Location = new System.Drawing.Point(426, 238);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 13);
+            this.label15.Size = new System.Drawing.Size(92, 17);
             this.label15.TabIndex = 56;
             this.label15.Text = "Start Date:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -405,18 +411,18 @@ namespace CIV
             // txtDiscount
             // 
             this.txtDiscount.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.Location = new System.Drawing.Point(433, 103);
+            this.txtDiscount.Location = new System.Drawing.Point(519, 144);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(56, 21);
+            this.txtDiscount.Size = new System.Drawing.Size(67, 24);
             this.txtDiscount.TabIndex = 15;
             this.txtDiscount.Text = "0";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(367, 106);
+            this.label14.Location = new System.Drawing.Point(439, 147);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 13);
+            this.label14.Size = new System.Drawing.Size(81, 17);
             this.label14.TabIndex = 52;
             this.label14.Text = "Discount:";
             // 
@@ -429,27 +435,27 @@ namespace CIV
             "Free",
             "General",
             "Student"});
-            this.cboCategory.Location = new System.Drawing.Point(133, 55);
+            this.cboCategory.Location = new System.Drawing.Point(160, 63);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(127, 21);
+            this.cboCategory.Size = new System.Drawing.Size(152, 25);
             this.cboCategory.TabIndex = 2;
             this.cboCategory.SelectedIndexChanged += new System.EventHandler(this.cboCategory_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(64, 58);
+            this.label13.Location = new System.Drawing.Point(77, 67);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 13);
+            this.label13.Size = new System.Drawing.Size(85, 17);
             this.label13.TabIndex = 50;
             this.label13.Text = "Category:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtSubCode
             // 
-            this.txtSubCode.Location = new System.Drawing.Point(133, 79);
+            this.txtSubCode.Location = new System.Drawing.Point(160, 91);
             this.txtSubCode.Name = "txtSubCode";
-            this.txtSubCode.Size = new System.Drawing.Size(103, 21);
+            this.txtSubCode.Size = new System.Drawing.Size(123, 24);
             this.txtSubCode.TabIndex = 3;
             this.txtSubCode.Visible = false;
             // 
@@ -457,9 +463,9 @@ namespace CIV
             // 
             this.rdoUnAvail.AutoSize = true;
             this.rdoUnAvail.Checked = true;
-            this.rdoUnAvail.Location = new System.Drawing.Point(225, 11);
+            this.rdoUnAvail.Location = new System.Drawing.Point(270, 13);
             this.rdoUnAvail.Name = "rdoUnAvail";
-            this.rdoUnAvail.Size = new System.Drawing.Size(102, 17);
+            this.rdoUnAvail.Size = new System.Drawing.Size(117, 21);
             this.rdoUnAvail.TabIndex = 48;
             this.rdoUnAvail.TabStop = true;
             this.rdoUnAvail.Text = "Unavailable";
@@ -470,9 +476,9 @@ namespace CIV
             // rdoAvail
             // 
             this.rdoAvail.AutoSize = true;
-            this.rdoAvail.Location = new System.Drawing.Point(133, 11);
+            this.rdoAvail.Location = new System.Drawing.Point(160, 13);
             this.rdoAvail.Name = "rdoAvail";
-            this.rdoAvail.Size = new System.Drawing.Size(86, 17);
+            this.rdoAvail.Size = new System.Drawing.Size(98, 21);
             this.rdoAvail.TabIndex = 47;
             this.rdoAvail.Text = "Available";
             this.rdoAvail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -482,26 +488,26 @@ namespace CIV
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(62, 13);
+            this.label11.Location = new System.Drawing.Point(74, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 13);
+            this.label11.Size = new System.Drawing.Size(89, 17);
             this.label11.TabIndex = 46;
             this.label11.Text = "Sub Code:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSubcode
             // 
-            this.lblSubcode.Location = new System.Drawing.Point(136, 80);
+            this.lblSubcode.Location = new System.Drawing.Point(163, 92);
             this.lblSubcode.Name = "lblSubcode";
-            this.lblSubcode.Size = new System.Drawing.Size(100, 16);
+            this.lblSubcode.Size = new System.Drawing.Size(120, 19);
             this.lblSubcode.TabIndex = 45;
             this.lblSubcode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(5, 80);
+            this.label10.Location = new System.Drawing.Point(6, 92);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 16);
+            this.label10.Size = new System.Drawing.Size(155, 19);
             this.label10.TabIndex = 44;
             this.label10.Text = "Subscription Code:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -509,78 +515,78 @@ namespace CIV
             // label12
             // 
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(519, 82);
+            this.label12.Location = new System.Drawing.Point(623, 95);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(17, 13);
+            this.label12.Size = new System.Drawing.Size(20, 15);
             this.label12.TabIndex = 43;
             this.label12.Text = "*";
             // 
             // label9
             // 
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(489, 135);
+            this.label9.Location = new System.Drawing.Point(587, 156);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 16);
+            this.label9.Size = new System.Drawing.Size(19, 18);
             this.label9.TabIndex = 40;
             this.label9.Text = "*";
             // 
             // label8
             // 
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(285, 245);
+            this.label8.Location = new System.Drawing.Point(342, 283);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 16);
+            this.label8.Size = new System.Drawing.Size(19, 18);
             this.label8.TabIndex = 39;
             this.label8.Text = "*";
             // 
             // label7
             // 
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(489, 253);
+            this.label7.Location = new System.Drawing.Point(587, 292);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 16);
+            this.label7.Size = new System.Drawing.Size(19, 18);
             this.label7.TabIndex = 38;
             this.label7.Text = "*";
             // 
             // label6
             // 
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(349, 178);
+            this.label6.Location = new System.Drawing.Point(419, 205);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 16);
+            this.label6.Size = new System.Drawing.Size(19, 19);
             this.label6.TabIndex = 37;
             this.label6.Text = "*";
             // 
             // label5
             // 
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(301, 151);
+            this.label5.Location = new System.Drawing.Point(361, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 16);
+            this.label5.Size = new System.Drawing.Size(19, 19);
             this.label5.TabIndex = 36;
             this.label5.Text = "*";
             // 
             // dtpBillDate
             // 
             this.dtpBillDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBillDate.Location = new System.Drawing.Point(433, 229);
+            this.dtpBillDate.Location = new System.Drawing.Point(519, 289);
             this.dtpBillDate.Name = "dtpBillDate";
-            this.dtpBillDate.Size = new System.Drawing.Size(104, 21);
+            this.dtpBillDate.Size = new System.Drawing.Size(124, 24);
             this.dtpBillDate.TabIndex = 20;
             // 
             // txtDistrict
             // 
             this.txtDistrict.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDistrict.Location = new System.Drawing.Point(133, 273);
+            this.txtDistrict.Location = new System.Drawing.Point(160, 315);
             this.txtDistrict.Name = "txtDistrict";
-            this.txtDistrict.Size = new System.Drawing.Size(152, 21);
+            this.txtDistrict.Size = new System.Drawing.Size(182, 24);
             this.txtDistrict.TabIndex = 11;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(73, 273);
+            this.label3.Location = new System.Drawing.Point(88, 315);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(73, 18);
             this.label3.TabIndex = 33;
             this.label3.Text = "District:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -589,9 +595,9 @@ namespace CIV
             // 
             this.cboCountries.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCountries.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCountries.Location = new System.Drawing.Point(433, 25);
+            this.cboCountries.Location = new System.Drawing.Point(520, 29);
             this.cboCountries.Name = "cboCountries";
-            this.cboCountries.Size = new System.Drawing.Size(192, 21);
+            this.cboCountries.Size = new System.Drawing.Size(230, 25);
             this.cboCountries.TabIndex = 14;
             this.cboCountries.SelectedIndexChanged += new System.EventHandler(this.cboCountries_SelectedIndexChanged);
             // 
@@ -599,42 +605,42 @@ namespace CIV
             // 
             this.cboStates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboStates.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboStates.Location = new System.Drawing.Point(433, 52);
+            this.cboStates.Location = new System.Drawing.Point(520, 60);
             this.cboStates.Name = "cboStates";
-            this.cboStates.Size = new System.Drawing.Size(192, 21);
+            this.cboStates.Size = new System.Drawing.Size(230, 25);
             this.cboStates.TabIndex = 12;
             // 
             // txtCity
             // 
             this.txtCity.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(133, 248);
+            this.txtCity.Location = new System.Drawing.Point(160, 286);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(152, 21);
+            this.txtCity.Size = new System.Drawing.Size(182, 24);
             this.txtCity.TabIndex = 10;
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(367, 26);
+            this.label16.Location = new System.Drawing.Point(440, 30);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 16);
+            this.label16.Size = new System.Drawing.Size(80, 18);
             this.label16.TabIndex = 30;
             this.label16.Text = "Country:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(385, 53);
+            this.label2.Location = new System.Drawing.Point(462, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(58, 19);
             this.label2.TabIndex = 30;
             this.label2.Text = "State:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(93, 248);
+            this.label1.Location = new System.Drawing.Point(112, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.Size = new System.Drawing.Size(48, 19);
             this.label1.TabIndex = 29;
             this.label1.Text = "City:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -642,27 +648,27 @@ namespace CIV
             // txtAmount
             // 
             this.txtAmount.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Location = new System.Drawing.Point(433, 253);
+            this.txtAmount.Location = new System.Drawing.Point(519, 317);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(56, 21);
+            this.txtAmount.Size = new System.Drawing.Size(67, 24);
             this.txtAmount.TabIndex = 21;
             this.txtAmount.Tag = "";
-            this.txtAmount.Text = "50.00";
+            this.txtAmount.Text = "250.00";
             // 
             // label_Amount
             // 
-            this.label_Amount.Location = new System.Drawing.Point(369, 254);
+            this.label_Amount.Location = new System.Drawing.Point(442, 318);
             this.label_Amount.Name = "label_Amount";
-            this.label_Amount.Size = new System.Drawing.Size(64, 16);
+            this.label_Amount.Size = new System.Drawing.Size(77, 19);
             this.label_Amount.TabIndex = 26;
             this.label_Amount.Text = "Amount:";
             this.label_Amount.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label_PaymentDt
             // 
-            this.label_PaymentDt.Location = new System.Drawing.Point(361, 231);
+            this.label_PaymentDt.Location = new System.Drawing.Point(432, 292);
             this.label_PaymentDt.Name = "label_PaymentDt";
-            this.label_PaymentDt.Size = new System.Drawing.Size(72, 16);
+            this.label_PaymentDt.Size = new System.Drawing.Size(87, 18);
             this.label_PaymentDt.TabIndex = 25;
             this.label_PaymentDt.Text = "Bill Date:";
             this.label_PaymentDt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -670,35 +676,35 @@ namespace CIV
             // txtBillNo
             // 
             this.txtBillNo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillNo.Location = new System.Drawing.Point(433, 205);
+            this.txtBillNo.Location = new System.Drawing.Point(519, 262);
             this.txtBillNo.Name = "txtBillNo";
-            this.txtBillNo.Size = new System.Drawing.Size(96, 21);
+            this.txtBillNo.Size = new System.Drawing.Size(115, 24);
             this.txtBillNo.TabIndex = 19;
             // 
             // label_BillNo
             // 
             this.label_BillNo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_BillNo.Location = new System.Drawing.Point(377, 206);
+            this.label_BillNo.Location = new System.Drawing.Point(451, 263);
             this.label_BillNo.Name = "label_BillNo";
-            this.label_BillNo.Size = new System.Drawing.Size(56, 16);
+            this.label_BillNo.Size = new System.Drawing.Size(68, 18);
             this.label_BillNo.TabIndex = 23;
             this.label_BillNo.Text = "Bill no:";
             this.label_BillNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(352, 310);
+            this.btnCancel.Location = new System.Drawing.Point(422, 358);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(152, 24);
+            this.btnCancel.Size = new System.Drawing.Size(183, 27);
             this.btnCancel.TabIndex = 23;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(197, 310);
+            this.btnSave.Location = new System.Drawing.Point(236, 358);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(147, 24);
+            this.btnSave.Size = new System.Drawing.Size(177, 27);
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "&Save and Print";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -719,96 +725,96 @@ namespace CIV
             "The.",
             "",
             ""});
-            this.cboTitle.Location = new System.Drawing.Point(133, 103);
+            this.cboTitle.Location = new System.Drawing.Point(160, 119);
             this.cboTitle.Name = "cboTitle";
-            this.cboTitle.Size = new System.Drawing.Size(80, 21);
+            this.cboTitle.Size = new System.Drawing.Size(96, 25);
             this.cboTitle.TabIndex = 4;
             // 
             // cboMagazine
             // 
             this.cboMagazine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMagazine.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboMagazine.Location = new System.Drawing.Point(133, 32);
+            this.cboMagazine.Location = new System.Drawing.Point(160, 37);
             this.cboMagazine.Name = "cboMagazine";
-            this.cboMagazine.Size = new System.Drawing.Size(152, 21);
+            this.cboMagazine.Size = new System.Drawing.Size(182, 25);
             this.cboMagazine.TabIndex = 1;
             this.cboMagazine.SelectedIndexChanged += new System.EventHandler(this.cboMagazine_SelectedIndexChanged);
             // 
             // txtCopies
             // 
             this.txtCopies.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCopies.Location = new System.Drawing.Point(433, 130);
+            this.txtCopies.Location = new System.Drawing.Point(519, 175);
             this.txtCopies.Name = "txtCopies";
-            this.txtCopies.Size = new System.Drawing.Size(56, 21);
+            this.txtCopies.Size = new System.Drawing.Size(67, 24);
             this.txtCopies.TabIndex = 16;
             this.txtCopies.Text = "1";
             // 
             // txtRemarks
             // 
             this.txtRemarks.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRemarks.Location = new System.Drawing.Point(433, 156);
+            this.txtRemarks.Location = new System.Drawing.Point(519, 205);
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(216, 21);
+            this.txtRemarks.Size = new System.Drawing.Size(259, 24);
             this.txtRemarks.TabIndex = 17;
             // 
             // txtPinCode
             // 
             this.txtPinCode.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPinCode.Location = new System.Drawing.Point(433, 79);
+            this.txtPinCode.Location = new System.Drawing.Point(520, 91);
             this.txtPinCode.MaxLength = 6;
             this.txtPinCode.Name = "txtPinCode";
-            this.txtPinCode.Size = new System.Drawing.Size(80, 21);
+            this.txtPinCode.Size = new System.Drawing.Size(96, 24);
             this.txtPinCode.TabIndex = 13;
             this.txtPinCode.Text = "0";
             // 
             // txtAddress3
             // 
             this.txtAddress3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress3.Location = new System.Drawing.Point(133, 223);
+            this.txtAddress3.Location = new System.Drawing.Point(160, 257);
             this.txtAddress3.Name = "txtAddress3";
-            this.txtAddress3.Size = new System.Drawing.Size(216, 21);
+            this.txtAddress3.Size = new System.Drawing.Size(259, 24);
             this.txtAddress3.TabIndex = 9;
             // 
             // txtAddress2
             // 
             this.txtAddress2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress2.Location = new System.Drawing.Point(133, 199);
+            this.txtAddress2.Location = new System.Drawing.Point(160, 230);
             this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.Size = new System.Drawing.Size(216, 21);
+            this.txtAddress2.Size = new System.Drawing.Size(259, 24);
             this.txtAddress2.TabIndex = 8;
             // 
             // txtAddress1
             // 
             this.txtAddress1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress1.Location = new System.Drawing.Point(133, 175);
+            this.txtAddress1.Location = new System.Drawing.Point(160, 202);
             this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(216, 21);
+            this.txtAddress1.Size = new System.Drawing.Size(259, 24);
             this.txtAddress1.TabIndex = 7;
             // 
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(133, 127);
+            this.txtLastName.Location = new System.Drawing.Point(160, 147);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(168, 21);
+            this.txtLastName.Size = new System.Drawing.Size(201, 24);
             this.txtLastName.TabIndex = 5;
             // 
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(133, 151);
+            this.txtFirstName.Location = new System.Drawing.Point(160, 174);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(168, 21);
+            this.txtFirstName.Size = new System.Drawing.Size(201, 24);
             this.txtFirstName.TabIndex = 6;
             this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // label_Copies
             // 
             this.label_Copies.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Copies.Location = new System.Drawing.Point(372, 130);
+            this.label_Copies.Location = new System.Drawing.Point(445, 175);
             this.label_Copies.Name = "label_Copies";
-            this.label_Copies.Size = new System.Drawing.Size(61, 16);
+            this.label_Copies.Size = new System.Drawing.Size(74, 18);
             this.label_Copies.TabIndex = 9;
             this.label_Copies.Text = "Copies:";
             this.label_Copies.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -816,9 +822,9 @@ namespace CIV
             // label_Magazine
             // 
             this.label_Magazine.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Magazine.Location = new System.Drawing.Point(61, 33);
+            this.label_Magazine.Location = new System.Drawing.Point(73, 38);
             this.label_Magazine.Name = "label_Magazine";
-            this.label_Magazine.Size = new System.Drawing.Size(72, 16);
+            this.label_Magazine.Size = new System.Drawing.Size(87, 19);
             this.label_Magazine.TabIndex = 8;
             this.label_Magazine.Text = "Magazine:";
             this.label_Magazine.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -826,9 +832,9 @@ namespace CIV
             // label_Remarks
             // 
             this.label_Remarks.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Remarks.Location = new System.Drawing.Point(362, 157);
+            this.label_Remarks.Location = new System.Drawing.Point(433, 206);
             this.label_Remarks.Name = "label_Remarks";
-            this.label_Remarks.Size = new System.Drawing.Size(72, 16);
+            this.label_Remarks.Size = new System.Drawing.Size(87, 19);
             this.label_Remarks.TabIndex = 7;
             this.label_Remarks.Text = "Remarks:";
             this.label_Remarks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -836,9 +842,9 @@ namespace CIV
             // label_PinCode
             // 
             this.label_PinCode.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PinCode.Location = new System.Drawing.Point(364, 79);
+            this.label_PinCode.Location = new System.Drawing.Point(437, 91);
             this.label_PinCode.Name = "label_PinCode";
-            this.label_PinCode.Size = new System.Drawing.Size(69, 16);
+            this.label_PinCode.Size = new System.Drawing.Size(83, 19);
             this.label_PinCode.TabIndex = 6;
             this.label_PinCode.Text = "PinCode:";
             this.label_PinCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -846,9 +852,9 @@ namespace CIV
             // label_Address3
             // 
             this.label_Address3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Address3.Location = new System.Drawing.Point(53, 223);
+            this.label_Address3.Location = new System.Drawing.Point(64, 257);
             this.label_Address3.Name = "label_Address3";
-            this.label_Address3.Size = new System.Drawing.Size(80, 16);
+            this.label_Address3.Size = new System.Drawing.Size(96, 19);
             this.label_Address3.TabIndex = 5;
             this.label_Address3.Text = "Address 3:";
             this.label_Address3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -856,9 +862,9 @@ namespace CIV
             // label_Address2
             // 
             this.label_Address2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Address2.Location = new System.Drawing.Point(54, 199);
+            this.label_Address2.Location = new System.Drawing.Point(65, 230);
             this.label_Address2.Name = "label_Address2";
-            this.label_Address2.Size = new System.Drawing.Size(79, 16);
+            this.label_Address2.Size = new System.Drawing.Size(95, 18);
             this.label_Address2.TabIndex = 4;
             this.label_Address2.Text = "Address 2:";
             this.label_Address2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -866,9 +872,9 @@ namespace CIV
             // label_Address1
             // 
             this.label_Address1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Address1.Location = new System.Drawing.Point(56, 175);
+            this.label_Address1.Location = new System.Drawing.Point(67, 202);
             this.label_Address1.Name = "label_Address1";
-            this.label_Address1.Size = new System.Drawing.Size(77, 16);
+            this.label_Address1.Size = new System.Drawing.Size(93, 18);
             this.label_Address1.TabIndex = 3;
             this.label_Address1.Text = "Address 1:";
             this.label_Address1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -877,17 +883,34 @@ namespace CIV
             // 
             this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(248, 0);
+            this.label4.Location = new System.Drawing.Point(298, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 16);
+            this.label4.Size = new System.Drawing.Size(153, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "* - Required Field";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(390, 124);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(130, 17);
+            this.label17.TabIndex = 59;
+            this.label17.Text = "Mobile Number:";
+            // 
+            // textBoxMobileNumber
+            // 
+            this.textBoxMobileNumber.Location = new System.Drawing.Point(519, 122);
+            this.textBoxMobileNumber.MaxLength = 10;
+            this.textBoxMobileNumber.Name = "textBoxMobileNumber";
+            this.textBoxMobileNumber.Size = new System.Drawing.Size(244, 24);
+            this.textBoxMobileNumber.TabIndex = 14;
             // 
             // frmNewSub
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(743, 399);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
+            this.ClientSize = new System.Drawing.Size(900, 438);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmNewSub";
@@ -976,7 +999,25 @@ namespace CIV
 				//TurnOnSave();
 				return;
 			}
-      if (rdoAvail.Checked)
+            if (textBoxMobileNumber.Text.Length == 0)
+            {
+                MessageBox.Show("Mobile Number must be in valid format", GlobalFn.FormText);
+                //TurnOnSave();
+                return;
+            }
+            if (textBoxMobileNumber.Text.Length != 10)
+            {
+                MessageBox.Show("Please enter a valid Mobile Number!", GlobalFn.FormText);
+                //TurnOnSave();
+                return;
+            }
+            if (!GlobalFn.IsNumeric(textBoxMobileNumber.Text))
+            {
+                MessageBox.Show("Mobile Number must be a number", GlobalFn.FormText);
+                //TurnOnSave();
+                return;
+            }
+            if (rdoAvail.Checked)
       {
         if (txtSubCode.Text.Length == 0)
         {
@@ -1007,7 +1048,8 @@ namespace CIV
           makeReceipt = "Y";
 			try
 			{
-			  int subID = SQL.AddNewSubscriber(subCode,cboTitle.SelectedItem.ToString(),txtLastName.Text,txtFirstName.Text,txtAddress1.Text,txtAddress2.Text,txtAddress3.Text,txtCity.Text,txtDistrict.Text,cboStates.SelectedValue.ToString(),txtPinCode.Text,cboCountries.SelectedValue.ToString(),"A",txtRemarks.Text,dtpStartDate.Value,dtpBillDate.Value,txtAmount.Text,langId,txtCopies.Text,txtBillNo.Text,category,Convert.ToDouble(txtDiscount.Text),makeReceipt);
+			  int subID = SQL.AddNewSubscriber(subCode,cboTitle.SelectedItem.ToString(),txtLastName.Text,txtFirstName.Text,txtAddress1.Text,txtAddress2.Text,txtAddress3.Text,txtCity.Text,txtDistrict.Text,cboStates.SelectedValue.ToString(),txtPinCode.Text, textBoxMobileNumber.Text, cboCountries.SelectedValue.ToString(),"A",txtRemarks.Text,dtpStartDate.Value,dtpBillDate.Value,txtAmount.Text,langId,txtCopies.Text,txtBillNo.Text,category,Convert.ToDouble(txtDiscount.Text) 
+                 , makeReceipt);
         // Get an automatic receipt id and display it.
         try
         {

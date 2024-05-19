@@ -191,7 +191,7 @@ namespace CIV.Classess
      */
 		public static int AddNewSubscriber(string subCode,string title,string lastName,string firstName,
 			string addressLine1,string addressLine2,string addressLine3,string city,string district,string state,
-			string pinCode,string countryId,string status,string remarks,DateTime startDate,DateTime billDate,string amountPaid,string languageId,
+			string pinCode, string mobileNumber, string countryId,string status,string remarks,DateTime startDate,DateTime billDate,string amountPaid,string languageId,
 			string numCopies,string billNum,string category,double discount,string makeReceipt)
 		{
 			StringBuilder oSb = new StringBuilder();
@@ -316,6 +316,10 @@ namespace CIV.Classess
                 oComm.Parameters.Add("@i_discount", SqlDbType.Decimal);
                 oComm.Parameters["@i_discount"].Value = discount;
                 oComm.Parameters["@i_discount"].Direction = ParameterDirection.Input;
+
+                oComm.Parameters.Add("@i_mobile_number", SqlDbType.VarChar, 50);
+                oComm.Parameters["@i_mobile_number"].Value = mobileNumber;
+                oComm.Parameters["@i_mobile_number"].Direction = ParameterDirection.Input;
 
                 oComm.Parameters.Add("@i_machine_name", SqlDbType.VarChar,250);
                 oComm.Parameters["@i_machine_name"].Value = GlobalFn.GetMachineName();
@@ -570,7 +574,8 @@ namespace CIV.Classess
 			sb.Append("		s.city,	");
 			sb.Append("		s.district,	");
 			sb.Append("		s.pin_code,	");
-			sb.Append("		status = case when s.status ='A' then 'Active' else 'Stopped' end,	");
+            sb.Append("		s.mobile_number,	");
+            sb.Append("		status = case when s.status ='A' then 'Active' else 'Stopped' end,	");
 			sb.Append("		s.remarks,	");
 			sb.Append("		s.state_id,	");
       sb.Append("		s.country_id,	");
@@ -1113,7 +1118,7 @@ AS */
 @i_remarks varchar(500),@i_language_id int,@i_num_copies int,
 @i_category varchar(1),@i_discount decimal(9,2),@o_return int output) 
      */
-    public static int EditSubscriber(int subscriberId, string subCode, string title, string lastName, string firstName, string addressLine1, string addressLine2, string addressLine3, string city, string district, int stateId, int pinCode, string countryId, string status, string remarks, string languageId, int numCopies,    string category, decimal discount)
+    public static int EditSubscriber(int subscriberId, string subCode, string title, string lastName, string firstName, string addressLine1, string addressLine2, string addressLine3, string city, string district, int stateId, int pinCode, string mobileNumber, string countryId, string status, string remarks, string languageId, int numCopies,    string category, decimal discount)
     {
       status = (status.Equals("Active")) ? "A" : "X";
 
@@ -1217,7 +1222,11 @@ AS */
         oComm.Parameters["@i_num_copies"].Value = numCopies;
         oComm.Parameters["@i_num_copies"].Direction = ParameterDirection.Input;
 
-        oComm.Parameters.Add("@i_category", SqlDbType.Char, 1);
+        oComm.Parameters.Add("@i_mobile_number", SqlDbType.VarChar);
+        oComm.Parameters["@i_mobile_number"].Value = mobileNumber;
+        oComm.Parameters["@i_mobile_number"].Direction = ParameterDirection.Input;
+
+                oComm.Parameters.Add("@i_category", SqlDbType.Char, 1);
         oComm.Parameters["@i_category"].Value = category;
         oComm.Parameters["@i_category"].Direction = ParameterDirection.Input;
 
@@ -1242,7 +1251,7 @@ AS */
     /*ALTER PROC [dbo].[P_Update_Subscribers](@i_subscriber_id int,@i_sub_code varchar(10),@i_title varchar(10),@i_last_name varchar(250),@i_first_name varchar(250),@i_address_line1 varchar(500),@i_address_line2 varchar(500),@i_address_line3 varchar(500),@i_city varchar(250),@i_district varchar(100),@i_state_id int,@i_pin_code int,@i_country_id int,@i_status char(1),@i_remarks varchar(500),@i_language_id int,@i_amount decimal(9,2),@i_num_copies int,@i_bill_date datetime,@i_bill_num int,@i_category varchar(1),@i_discount decimal(9,2),@i_machine_name varchar(250),@i_make_receipt char(1),@o_return int output)
          */ 
 
-		public static int UpdateModifySubscriber(int subscriberId,string subCode,string title,string lastName,string firstName,string addressLine1,string addressLine2,string addressLine3,string city,string district,int stateId,int pinCode, string countryId,string status,string remarks,string languageId,decimal amountPaid,int numCopies,DateTime billDate,int billNum,string category,decimal discount,string makeReceipt)
+		public static int UpdateModifySubscriber(int subscriberId,string subCode,string title,string lastName,string firstName,string addressLine1,string addressLine2,string addressLine3,string city,string district,int stateId,int pinCode, string mobileNumber, string countryId,string status,string remarks,string languageId,decimal amountPaid,int numCopies,DateTime billDate,int billNum,string category,decimal discount,string makeReceipt)
 		{
 			status = (status.Equals("Active"))? "A":"X";
 			
@@ -1349,8 +1358,12 @@ AS */
 				oComm.Parameters.Add("@i_num_copies", SqlDbType.Int);
 				oComm.Parameters["@i_num_copies"].Value =  numCopies;
 				oComm.Parameters["@i_num_copies"].Direction = ParameterDirection.Input;
-				
-				oComm.Parameters.Add("@i_bill_date", SqlDbType.DateTime);
+
+                oComm.Parameters.Add("@i_mobile_number", SqlDbType.VarChar, 50);
+                oComm.Parameters["@i_mobile_number"].Value = mobileNumber;
+                oComm.Parameters["@i_mobile_number"].Direction = ParameterDirection.Input;
+
+                oComm.Parameters.Add("@i_bill_date", SqlDbType.DateTime);
 				oComm.Parameters["@i_bill_date"].Value =  billDate;
 				oComm.Parameters["@i_bill_date"].Direction = ParameterDirection.Input;
 
