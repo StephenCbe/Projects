@@ -15,6 +15,21 @@ namespace CIV
         public frmRevenueReport()
         {
             InitializeComponent();
+
+            if (!SessionManager.CurrentUser.IsAuthenticated)
+            {
+                MessageBox.Show("User is not authenticated.");
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("User is authenticated.");
+                //lblUsername.Text = "Welcome, " + SessionManager.CurrentUser.Username;
+                // Additional setup based on the user's role
+            }
+
             this.Text += " - " + GlobalFn.FormText;
             dtpStart.CustomFormat = "dd/MM/yyyy";
             dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;

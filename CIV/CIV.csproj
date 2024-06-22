@@ -151,10 +151,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classess\printWin32.cs" />
+    <Compile Include="Classess\SessionManager.cs" />
     <Compile Include="Classess\SQL.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classess\UserAuthenticator.cs" />
+    <Compile Include="Classess\UserSession.cs" />
     <Compile Include="DataImport.cs">
       <SubType>Form</SubType>
     </Compile>

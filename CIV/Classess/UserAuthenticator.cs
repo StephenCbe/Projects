@@ -34,21 +34,30 @@ namespace CIV.Classess
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT PasswordHash FROM Users WHERE Username = @Username";
+                string query = "SELECT UserID, PasswordHash, Role FROM Users WHERE Username = @Username";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
 
                 connection.Open();
-                string storedHash = command.ExecuteScalar() as string;
+                SqlDataReader reader = command.ExecuteReader();
 
-                if (storedHash == null)
+                if (reader.Read())
                 {
-                    return false; // User not found
+                    string storedHash = reader["PasswordHash"].ToString();
+                    int userId = (int)reader["UserID"];
+                    string role = reader["Role"].ToString();
+
+                    if (PasswordHelper.VerifyPassword(password, storedHash))
+                    {
+                        SessionManager.StartSession(userId, username, role);
+                        return true;
+                    }
                 }
 
-                return PasswordHelper.VerifyPassword(password, storedHash);
+                return false;
             }
         }
+
     }
 }
