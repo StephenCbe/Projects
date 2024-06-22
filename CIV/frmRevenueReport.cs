@@ -15,8 +15,7 @@ namespace CIV
         public frmRevenueReport()
         {
             InitializeComponent();
-
-            if (!SessionManager.CurrentUser.IsAuthenticated)
+            if (SessionManager.CurrentUser == null)
             {
                 MessageBox.Show("User is not authenticated.");
                 LoginForm loginForm = new LoginForm();
@@ -25,20 +24,39 @@ namespace CIV
             }
             else
             {
-                MessageBox.Show("User is authenticated.");
-                //lblUsername.Text = "Welcome, " + SessionManager.CurrentUser.Username;
-                // Additional setup based on the user's role
+                if (!SessionManager.CurrentUser.IsAuthenticated)
+                {
+                    MessageBox.Show("User is not authenticated.", GlobalFn.FormText);
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                    this.Close();
+                }
+                else if (!SessionManager.CurrentUser.Role.ToLower().Equals("admin"))
+                {
+                    MessageBox.Show("You are not authorized to see this Report!", GlobalFn.FormText);
+                    this.Close();
+
+                    frmNewSub objNew = new frmNewSub();
+                    objNew.Show();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("You are authorized to see Revenue Report!", GlobalFn.FormText);
+                    //lblUsername.Text = "Welcome, " + SessionManager.CurrentUser.Username;
+                    // Additional setup based on the user's role
+                }
+
+                this.Text += " - " + GlobalFn.FormText;
+                dtpStart.CustomFormat = "dd/MM/yyyy";
+                dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+
+                dtpEnd.CustomFormat = "dd/MM/yyyy";
+                dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+
+                BindLanguages();
+                BuildGrid();
             }
-
-            this.Text += " - " + GlobalFn.FormText;
-            dtpStart.CustomFormat = "dd/MM/yyyy";
-            dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-
-            dtpEnd.CustomFormat = "dd/MM/yyyy";
-            dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-        
-            BindLanguages();
-            BuildGrid();
         }
 
         private void BindLanguages()

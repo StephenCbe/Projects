@@ -8,63 +8,65 @@ using CIV.Classess;
 
 namespace CIV
 {
-	/// <summary>
-	/// Summary description for Form1.
-	/// </summary>
-	public class frmBaseForm : System.Windows.Forms.Form
-	{
-    private System.Windows.Forms.MainMenu mainMenu1;
+    /// <summary>
+    /// Summary description for Form1.
+    /// </summary>
+    public class frmBaseForm : System.Windows.Forms.Form
+    {
+        private System.Windows.Forms.MainMenu mainMenu1;
         protected MenuItem menuAction;
-		private System.Windows.Forms.MenuItem menuNew;
-    protected System.Windows.Forms.MenuItem menuExit;
-    protected MenuItem menuSearch;
-    private System.Windows.Forms.MenuItem menuRenew;
-    protected MenuItem menuImport;
-    protected MenuItem menuPrint;
-    protected MenuItem menuReports;
-    private MenuItem menuPrintAddress;
-    private MenuItem menuPrintDues;
-    private MenuItem menuPayHistory;
-    private MenuItem menuRevenue;
-    private MenuItem menuNewSubRep;
-    private MenuItem menuMagCost;
-    private MenuItem menuDuesReport;
-    private MenuItem menuItem3;
-    private MenuItem menuItem5;
-    protected MenuItem menuManage;
-    private MenuItem menuCountries;
-    private MenuItem menuStates;
-    private MenuItem menuItem1;
-    private IContainer components;
+        private System.Windows.Forms.MenuItem menuNew;
+        protected System.Windows.Forms.MenuItem menuExit;
+        protected MenuItem menuSearch;
+        private System.Windows.Forms.MenuItem menuRenew;
+        protected MenuItem menuImport;
+        protected MenuItem menuPrint;
+        protected MenuItem menuReports;
+        private MenuItem menuPrintAddress;
+        private MenuItem menuPrintDues;
+        private MenuItem menuPayHistory;
+        private MenuItem menuRevenue;
+        private MenuItem menuNewSubRep;
+        private MenuItem menuMagCost;
+        private MenuItem menuDuesReport;
+        private MenuItem menuItem3;
+        private MenuItem menuItem5;
+        protected MenuItem menuManage;
+        private MenuItem menuCountries;
+        private MenuItem menuStates;
+        private MenuItem menuItem1;
+        private MenuItem menuItem2;
+        private MenuItem menuItemNewUser;
+        private IContainer components;
 
-		public frmBaseForm()
-		{
-			InitializeComponent();
-      GlobalFn.SetCulture("en-GB");
-		}
+        public frmBaseForm()
+        {
+            InitializeComponent();
+            GlobalFn.SetCulture("en-GB");
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing )
-			{
-				if (components != null) 
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuAction = new System.Windows.Forms.MenuItem();
@@ -88,6 +90,8 @@ namespace CIV
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.menuItem5 = new System.Windows.Forms.MenuItem();
             this.menuExit = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuItemNewUser = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -99,7 +103,8 @@ namespace CIV
             this.menuManage,
             this.menuPrint,
             this.menuReports,
-            this.menuExit});
+            this.menuExit,
+            this.menuItem2});
             // 
             // menuAction
             // 
@@ -241,57 +246,70 @@ namespace CIV
             this.menuExit.Text = "Exit";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
+            // menuItem2
+            // 
+            this.menuItem2.Index = 7;
+            this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItemNewUser});
+            this.menuItem2.Text = "Manage";
+            // 
+            // menuItemNewUser
+            // 
+            this.menuItemNewUser.Index = 0;
+            this.menuItemNewUser.Text = "Add New User";
+            this.menuItemNewUser.Click += new System.EventHandler(this.menuItemNewUser_Click);
+            // 
             // frmBaseForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(520, 246);
+            this.ClientSize = new System.Drawing.Size(520, 226);
             this.Menu = this.mainMenu1;
             this.Name = "frmBaseForm";
             this.ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-    protected void NewSub()
-    {
-        menuNew_Click(null,null);
-    }
-		private void menuNew_Click(object sender, System.EventArgs e)
-		{
-			this.Close();
-			frmNewSub newForm = new frmNewSub();
-			newForm.Show();
+        protected void NewSub()
+        {
+            menuNew_Click(null, null);
+        }
+        private void menuNew_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            frmNewSub newForm = new frmNewSub();
+            newForm.Show();
             newForm.Location = this.Location;
-		}
+        }
 
-		private void menuExit_Click(object sender, System.EventArgs e)
-		{
-			Application.Exit();
-		}
+        private void menuExit_Click(object sender, System.EventArgs e)
+        {
+            Application.Exit();
+        }
 
-		private void menuSearch_Click(object sender, System.EventArgs e)
-		{
-			this.Close();
-			frmSearch newForm = new frmSearch();
-			newForm.Show();
+        private void menuSearch_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            frmSearch newForm = new frmSearch();
+            newForm.Show();
             newForm.Location = this.Location;
-		}
+        }
 
-		private void menuRenew_Click(object sender, System.EventArgs e)
-		{
-			this.Close();
-			frmSearch newForm = new frmSearch();
-			newForm.Show();
+        private void menuRenew_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            frmSearch newForm = new frmSearch();
+            newForm.Show();
             newForm.Location = this.Location;
-		}
+        }
 
-		private void menuImport_Click(object sender, System.EventArgs e)
-		{
-			this.Close();
-			frmDataImport newForm = new frmDataImport();
-			newForm.Show();
+        private void menuImport_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            frmDataImport newForm = new frmDataImport();
+            newForm.Show();
             newForm.Location = this.Location;
-		}
+        }
 
         private void menuPrintAddress_Click(object sender, EventArgs e)
         {
@@ -315,14 +333,32 @@ namespace CIV
             frmPaymentHistory newForm = new frmPaymentHistory();
             newForm.Show();
             newForm.Location = this.Location;
- 
+
         }
         private void menuRevenue_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmRevenueReport newForm = new frmRevenueReport();
-            newForm.Show();
-            newForm.Location = this.Location;
+            if (SessionManager.CurrentUser == null)
+            {
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+            }
+            else if (!SessionManager.CurrentUser.IsAuthenticated)
+            {
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+            }
+            else if (!SessionManager.CurrentUser.Role.ToLower().Equals("admin"))
+            {
+                MessageBox.Show("You are not authorized to see this Report!", GlobalFn.FormText);
+                return;
+            }
+            else
+            {
+                frmRevenueReport newForm = new frmRevenueReport();
+                newForm.Show();
+                newForm.Location = this.Location;
+            }
         }
 
         private void menuNewSubRep_Click(object sender, EventArgs e)
@@ -367,28 +403,34 @@ namespace CIV
 
         private void menuCountries_Click(object sender, EventArgs e)
         {
-          this.Close();
-          frmManageCountries newForm = new frmManageCountries(false);
-          newForm.Show();
-          newForm.Location = this.Location;
+            this.Close();
+            frmManageCountries newForm = new frmManageCountries(false);
+            newForm.Show();
+            newForm.Location = this.Location;
         }
 
         private void menuStates_Click(object sender, EventArgs e)
         {
-          this.Close();
-          frmManageStates newForm = new frmManageStates(false);
-          newForm.Show();
-          newForm.Location = this.Location;
+            this.Close();
+            frmManageStates newForm = new frmManageStates(false);
+            newForm.Show();
+            newForm.Location = this.Location;
         }
 
-    private void overseasAddress_Click(object sender, EventArgs e)
-    {
-      this.Close();
-      frmPrintOverseasAddLbls newForm = new frmPrintOverseasAddLbls();
-      newForm.Show();
-      newForm.Location = this.Location;
-    }
+        private void overseasAddress_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmPrintOverseasAddLbls newForm = new frmPrintOverseasAddLbls();
+            newForm.Show();
+            newForm.Location = this.Location;
+        }
 
-       
-	}
+        private void menuItemNewUser_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            NewUserForm newForm = new NewUserForm();
+            newForm.Show();
+            newForm.Location = this.Location;
+        }
+    }
 }

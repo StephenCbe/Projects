@@ -30,7 +30,7 @@ namespace CIV
                 // Open the main form or continue to the application
                 frmRevenueReport mainForm = new frmRevenueReport();
                 mainForm.Show();
-                this.Hide();
+                this.Close();
             }
             else
             {
