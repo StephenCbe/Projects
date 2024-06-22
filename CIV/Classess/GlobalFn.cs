@@ -10,10 +10,17 @@ using System.Windows.Forms;
 
 namespace CIV.Classess
 {
-	/// <summary>
-	/// Summary description for GlobalFn.
-	/// </summary>
-	public class GlobalFn
+    public enum UserRole
+    {
+        Admin,
+        User,
+        Guest
+    }
+
+    /// <summary>
+    /// Summary description for GlobalFn.
+    /// </summary>
+    public class GlobalFn
 	{
         public static bool CancelPrint = false;
         private static System.Drawing.Point appLocation = new Point(1, 1);
