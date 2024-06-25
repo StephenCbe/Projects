@@ -16,6 +16,7 @@ namespace CIV
         public NewUserForm()
         {
             InitializeComponent();
+            this.Text += " - " + GlobalFn.FormText;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +46,15 @@ namespace CIV
             UserAuthenticator authenticator = new UserAuthenticator();
             authenticator.CreateUser(textBoxUserName.Text, textBoxPassword.Text, textBoxEmail.Text, role);
             MessageBox.Show("New User has been Added Successfully", GlobalFn.FormText);
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmSearch search = new frmSearch();
+            search.Show();
+            search.Location = this.Location;
+            
         }
     }
 }

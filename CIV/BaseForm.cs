@@ -35,13 +35,30 @@ namespace CIV
         private MenuItem menuCountries;
         private MenuItem menuStates;
         private MenuItem menuItem1;
-        private MenuItem menuItem2;
-        private MenuItem menuItemNewUser;
+        private MenuItem menuItemAddNewUser;
+        private MenuItem menuItemLogout;
         private IContainer components;
 
         public frmBaseForm()
         {
             InitializeComponent();
+            if (SessionManager.CurrentUser != null && SessionManager.CurrentUser.IsAuthenticated)
+            {
+                if (SessionManager.CurrentUser.Role.ToLower() == "admin")
+                {
+                    menuItemAddNewUser.Visible = true;
+                }
+                else
+                {
+                    menuItemAddNewUser.Visible = false;
+                }
+                menuItemLogout.Visible = true;
+            }
+            else
+            {
+                menuItemLogout.Visible = false;
+                menuItemAddNewUser.Visible = false;
+            }
             GlobalFn.SetCulture("en-GB");
         }
 
@@ -90,8 +107,8 @@ namespace CIV
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.menuItem5 = new System.Windows.Forms.MenuItem();
             this.menuExit = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
-            this.menuItemNewUser = new System.Windows.Forms.MenuItem();
+            this.menuItemAddNewUser = new System.Windows.Forms.MenuItem();
+            this.menuItemLogout = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -104,7 +121,7 @@ namespace CIV
             this.menuPrint,
             this.menuReports,
             this.menuExit,
-            this.menuItem2});
+            this.menuItemLogout});
             // 
             // menuAction
             // 
@@ -143,7 +160,8 @@ namespace CIV
             this.menuManage.Index = 3;
             this.menuManage.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuCountries,
-            this.menuStates});
+            this.menuStates,
+            this.menuItemAddNewUser});
             this.menuManage.Text = "Manage";
             // 
             // menuCountries
@@ -246,18 +264,18 @@ namespace CIV
             this.menuExit.Text = "Exit";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
-            // menuItem2
+            // menuItemAddNewUser
             // 
-            this.menuItem2.Index = 7;
-            this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItemNewUser});
-            this.menuItem2.Text = "Manage";
+            this.menuItemAddNewUser.Index = 2;
+            this.menuItemAddNewUser.Text = "Add New User";
+            this.menuItemAddNewUser.Visible = false;
+            this.menuItemAddNewUser.Click += new System.EventHandler(this.menuItemAddNewUser_Click);
             // 
-            // menuItemNewUser
+            // menuItemLogout
             // 
-            this.menuItemNewUser.Index = 0;
-            this.menuItemNewUser.Text = "Add New User";
-            this.menuItemNewUser.Click += new System.EventHandler(this.menuItemNewUser_Click);
+            this.menuItemLogout.Index = 7;
+            this.menuItemLogout.Text = "Logout";
+            this.menuItemLogout.Click += new System.EventHandler(this.menuItemLogout_Click);
             // 
             // frmBaseForm
             // 
@@ -337,16 +355,22 @@ namespace CIV
         }
         private void menuRevenue_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             if (SessionManager.CurrentUser == null)
             {
+                this.Close();
+                MessageBox.Show("Revenue report is accessible for ADMINS Only!\n\n\n You will redirected to login Form!", GlobalFn.FormText);
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();
+                loginForm.Location = this.Location;
             }
             else if (!SessionManager.CurrentUser.IsAuthenticated)
             {
+                this.Close();
+                MessageBox.Show("Revenue report is accessible for ADMINS Only!\n\n\n You will redirected to login Form!", GlobalFn.FormText);
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();
+                loginForm.Location=this.Location;
             }
             else if (!SessionManager.CurrentUser.Role.ToLower().Equals("admin"))
             {
@@ -355,6 +379,7 @@ namespace CIV
             }
             else
             {
+                this.Close();
                 frmRevenueReport newForm = new frmRevenueReport();
                 newForm.Show();
                 newForm.Location = this.Location;
@@ -424,13 +449,22 @@ namespace CIV
             newForm.Show();
             newForm.Location = this.Location;
         }
-
-        private void menuItemNewUser_Click(object sender, EventArgs e)
+        private void menuItemAddNewUser_Click(object sender, EventArgs e)
         {
             this.Close();
             NewUserForm newForm = new NewUserForm();
             newForm.Show();
             newForm.Location = this.Location;
+        }
+
+        private void menuItemLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            SessionManager.EndSession();
+            frmSearch search =new frmSearch();
+            search.Show();
+            search.Location = this.Location;
+            
         }
     }
 }

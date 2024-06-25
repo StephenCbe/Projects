@@ -39,6 +39,7 @@
             this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
             this.radioButtonUser = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,9 +108,9 @@
             // buttonAddUser
             // 
             this.buttonAddUser.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUser.Location = new System.Drawing.Point(124, 159);
+            this.buttonAddUser.Location = new System.Drawing.Point(86, 159);
             this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(190, 23);
+            this.buttonAddUser.Size = new System.Drawing.Size(128, 23);
             this.buttonAddUser.TabIndex = 8;
             this.buttonAddUser.Text = "Add New User";
             this.buttonAddUser.UseVisualStyleBackColor = true;
@@ -149,11 +150,23 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(241, 159);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 12;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // NewUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 314);
+            this.ClientSize = new System.Drawing.Size(593, 334);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonAddUser);
             this.Controls.Add(this.label4);
@@ -185,5 +198,6 @@
         private System.Windows.Forms.RadioButton radioButtonAdmin;
         private System.Windows.Forms.RadioButton radioButtonUser;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
